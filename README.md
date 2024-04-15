@@ -27,7 +27,7 @@ Then lamdba functions were used to do the transformation.
 
 
 # Data Warehouse
-We use DynamoDB
+We use DynamoDB as our data warehouse. <br>
 Amazon DynamoDB is a fully-managed NoSQL database service provided by AWS. It delivers reliable performance at any scale, making it a go-to solution for mobile, web, gaming, ad tech, IoT, and many other applications that require low-latency data access. DynamoDB supports both document and key-value data models, and it offers features such as ACID transactions, in-memory caching with DynamoDB Accelerator (DAX), and built-in security, backup, restore, and in-place data modification capabilities. <br>
 
 
