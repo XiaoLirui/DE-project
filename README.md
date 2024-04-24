@@ -6,7 +6,9 @@ A data dictionary for specific API can be found at Finnhub website.<br>
 I've presented a small overview of some of the data analysis in a dashboard where you can get a general idea about what it has done.<br>
 
 # Pipeline Technologies
-The pipeline was built to get real time Finnhub, and use Amazon components to store data and make real-time analysis dashboard. <br>
+The pipeline was built to get real time Finnhub, and use Amazon components to store data in DynamoDB. Then we use middleware called Rockset and PowerBI to make real-time analysis dashboard. <br>
+
+![alt text]([url](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/pipeline.png))
 
 Amazon Kinesis is a scalable and durable real-time data streaming service provided by AWS. It enables continuous collection and analysis of large streams of data records. With Kinesis, you can ingest real-time data such as video, audio, application logs, website clickstreams, and IoT telemetry data for machine learning, analytics, and other applications. Kinesis can handle high throughput and scale with ease, allowing you to process and analyze data as it arrives and respond in real-time. <br>
 
