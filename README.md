@@ -26,7 +26,7 @@ Data is continuously ingested using Kafka-like methods through a Python script. 
 # Transformations
 AWS Lambda functions are triggered by an upstream event from the Kethesis data stream. This trigger is activated continuously as data flows into the Kethesis data stream, ensuring that the Lambda functions are invoked in real-time upon data arrival. These functions are responsible for performing ETL (Extract, Transform, Load) processes on the incoming streaming data. After transformation, the processed data is efficiently routed to Amazon DynamoDB for persistent storage. This automated pipeline facilitates real-time data processing and storage, enabling rapid access and retrieval of transformed data for further analysis and application use.
 
-
+![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/lambda.png)
 
 # Data Warehouse
 We use DynamoDB as our data warehouse. <br>
