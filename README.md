@@ -1,6 +1,6 @@
 # DE-project
-# Overview
-The goal of this project is to apply data engineering (DE) concepts to orchestrate a real time pipeline to ingest data from a financial API to Amazon Cloud Platform and perform simple transformation and visualization with dashboards. The project uses an "extract-transform-load" (ETL) philosophy, where data is sent into AWS by kenisis producer and then subsequently transformed and loaded by Lambda function into DynamoDB in AWS.<br>
+# Problem Description and Overview
+Speed is a constant theme in the financial markets. The goal of this project is to apply data engineering (DE) concepts to orchestrate a real time pipeline to ingest data from a financial API to Amazon Cloud Platform and perform simple transformation and visualization with dashboards. The project uses an "extract-transform-load" (ETL) philosophy, where data is sent into AWS by kenisis producer and then subsequently transformed and loaded by Lambda function into DynamoDB in AWS.<br>
 The data was ingested using websocket method and Finnhub Stock API (https://finnhub.io/). <br>
 A data dictionary for specific API can be found at Finnhub website.<br>
 I've presented a small overview of some of the data analysis in a dashboard where you can get a general idea about what it has done.<br>
