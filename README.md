@@ -6,7 +6,7 @@ A data dictionary for specific API can be found at Finnhub website.<br>
 I've presented a small overview of some of the data analysis in a dashboard where you can get a general idea about what it has done.<br>
 
 # Pipeline Technologies
-The pipeline was built to get real time data from Finnhub using websocket API, and use Amazon components to store data in DynamoDB. Then we use middleware called Rockset and PowerBI to make real-time analysis dashboard. <br>
+The pipeline was built to get real time data from Finnhub using websocket API, and use Amazon Streaming service and ETL tools to store data in DynamoDB. Then we use middleware called Rockset and PowerBI to make real-time analysis dashboard. <br>
 
 ![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/pipeline.png)
 
@@ -47,8 +47,17 @@ To configure Rockset with Power BI, we leverage the Power BI Python SDK. This in
 ![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/Dashboard.png)
 
 # Reproducing this repo
-1.Prepare Python3 and AWS service accounts with appropriate permissions(IAM) for Kenisis and DynamoDB. <br>
+1. Prepare Python3 and AWS service accounts with appropriate permissions(IAM) for Kenisis and DynamoDB. <br>
+![alt text](https://github.com/XiaoLirui/DE-project/blob/main/Transformation%20and%20Load/AWS%20IAM%20role%20set%20up.png)
 2. Configure the Lambda Function.
+![alt text](https://github.com/XiaoLirui/DE-project/blob/main/Transformation%20and%20Load/lambda%20function%20setup.png)
+3. Create DynamoDB
+4. Create Rockset API key
+![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/1.png)
+![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/createapiky.png)
+6. Use Rockset-powerBI python SDK. Detail are in this website
+https://github.com/rockset/rockset-python-client
+7. Get data source and make dashboard.
 
 
 # Future Improvement
