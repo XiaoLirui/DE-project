@@ -6,7 +6,7 @@ A data dictionary for specific API can be found at Finnhub website.<br>
 I've presented a small overview of some of the data analysis in a dashboard where you can get a general idea about what it has done.<br>
 
 # Pipeline Technologies
-The pipeline was built to get real time Finnhub, and use Amazon components to store data in DynamoDB. Then we use middleware called Rockset and PowerBI to make real-time analysis dashboard. <br>
+The pipeline was built to get real time data from Finnhub using websocket API, and use Amazon components to store data in DynamoDB. Then we use middleware called Rockset and PowerBI to make real-time analysis dashboard. <br>
 
 ![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/pipeline.png)
 
@@ -38,10 +38,13 @@ We employ Power BI as our primary tool for data visualization. Power BI is a rob
 
 Additionally, we utilize Rockset, a real-time indexing database service designed for rapid, low-latency queries at scale. Rockset is particularly advantageous due to its excellent integration with DynamoDB. This integration allows us to execute complex queries directly on our DynamoDB data without the need for manual data extraction and transformation, thus enhancing our data processing workflows.
 
+![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/Rockset.png)
+
 The reason we use Rockset stems from its seamless connectivity with DynamoDB, enabling efficient real-time data operations. In this setup, we utilize the Rockset Python SDK to create a Query Lambda. This Query Lambda acts as a powerful intermediary, allowing us to run SQL-like queries over our DynamoDB data, which is especially useful for integrating with external data visualization tools like Power BI.
 
 To configure Rockset with Power BI, we leverage the Power BI Python SDK. This integration involves preparing a Python script within Power BI that uses the Rockset Python SDK. The script executes the Query Lambda, and the results are then used as input data for Power BI’s visualizations. This approach allows us to dynamically visualize and interact with our data in Power BI, using the latest updates processed by Rockset in near-real-time. This method provides a streamlined, efficient pipeline for visual analytics, enhancing our decision-making processes with up-to-date insights derived directly from our operational database.
 
+![alt text](https://github.com/XiaoLirui/DE-project/blob/main/other%20files/Dashboard.png)
 
 # Reproducing this repo
 1.Prepare Python3 and AWS service accounts with appropriate permissions(IAM) for Kenisis and DynamoDB. <br>
